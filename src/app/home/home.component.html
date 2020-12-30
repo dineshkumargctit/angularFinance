@@ -1,0 +1,37 @@
+
+
+<div class="container-fluid border border-primary col-lg-6 ">
+    <div class="bg-info col-lg-auto text-white">
+        <h1 >Welcome {{currUser.userName}}</h1>
+    </div>
+    <div *ngIf="!errMsg.showMessage" class="container-fluid">
+        <div class="row ">
+            <h3 class="bg-info col-lg-auto text-white">Choose your Service</h3>
+        </div>
+        <div class="row">
+            <a class="col col-lg-auto bg-info text-dark" *ngFor="let route of routes" [routerLink]="route.url">{{route.linkname}}</a>
+        </div>
+    </div>
+</div>
+<div class="container col-lg-6" *ngIf="!errMsg.showMessage">
+        <router-outlet ></router-outlet>
+        <!--<router-outlet></router-outlet>-->
+        <!--<app-login (loginUser)="LoginToUser( $event )" ></app-login> -->
+        <!--<app-add-user (addNewUser)="AjjddNewUser( $event )" (errorEvent)="ShowErr( $event )" ></app-add-user>  -->
+        <!--<app-add-transaction   (addTranEvent)="addTransaction1( $event )" (errorEvent)="ShowErr( $event )"></app-add-transaction> -->
+        <!--<app-add-tran-type (addNewTranType)="addNewTran( $event )"></app-add-tran-type>-->
+        
+
+    <br>
+</div>
+<!--
+<div>
+    <app-error-message  *ngIf="errMsg.showMessage" [msg]="errMsg.errMessage"  (errorAckEvent)="hideError( $event )" ></app-error-message>
+</div>
+-->
+
+        <!--<a href="#">  New User </a>
+        <a href="#">  Login </a>
+        <a href="#">  New Tran Type </a>
+        <a href="#">  New Transaction </a>
+        <a href="#">  Generate Report </a> -->

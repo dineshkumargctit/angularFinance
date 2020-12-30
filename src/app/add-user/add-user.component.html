@@ -1,0 +1,18 @@
+<div class="card">
+<div class="card-text text-primary">
+    <h2>Registration</h2>
+
+    <p class="card-text text-info"> Please enter new user details for Registration</p>
+
+
+<input type="text"  [(ngModel)]="newUser.userName" class="input-text" placeholder="UserName" >
+<br>
+<input type="text"  [(ngModel)]="newUser.password" class="input-text" placeholder="Password" >
+</div>
+<br>
+<div class="card-text">
+    <button class="btn btn-primary  mx-1" (click)="addUser()">Create User</button>
+    <button class="btn btn-primary" >Cancel</button>
+</div>
+<br>
+</div>

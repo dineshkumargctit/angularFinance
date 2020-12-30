@@ -1,0 +1,26 @@
+<div *ngIf="!errMsg.showMessage" class="card">
+    <div  class="card-body">
+        <div class="card-title text-primary">
+            <h2>Login</h2>
+        </div>
+        <div class="card-text text-info">
+            <p>Please enter login details</p>
+        </div>
+        <div class="my-3">
+            <div class="row">
+                <input class="col-lg-auto" type="text"  [(ngModel)]="logUser.userName" class="input-text" placeholder="UserName" >
+            </div>
+            <div class="row ">
+                <input class="col-lg-auto" type="text"  [(ngModel)]="logUser.password" class="input-text" placeholder="Password" >
+            </div>
+        </div>
+        <div class="row">
+            <button  class="btn btn-primary col-lg-auto mx-1" (click)="login()">Login</button>
+            <button class="btn btn-primary col-lg-auto mx-1" >Cancel</button>
+        </div>
+        <br>
+    </div>
+</div>
+<div >
+    <app-error-message  *ngIf="errMsg.showMessage"  [msg]="errMsg.errMessage"  (errorAckEvent)="hideError( $event )" class="col-lg-auto"></app-error-message>
+</div>

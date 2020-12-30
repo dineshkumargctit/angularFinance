@@ -1,0 +1,26 @@
+
+<div class="card ">
+    <div class="card-text text-primary">
+    
+        <input type="text"  [(ngModel)]="newTranType.tranType"  placeholder="Transaction Type" >
+        <br>
+        <input type="text"  [(ngModel)]="newTranType.tranDesc"  placeholder="Transaction Description" >
+        <br>
+        <span class="mr-3">Income Tran Type:</span>
+        <input  type="radio" value="income" name="direction" [(ngModel)]="direct" >
+        <label class="mx-1" for="income">Income</label> 
+        <input type="radio" value="expense" name="direction" [(ngModel)]="direct">
+        <label class="mx-1" for="expense">Expense</label><br>
+
+        <span class="mr-3">Junk Transaction</span>
+        <input type="radio" id="junkYes" name="junkTran" value="Yes" [(ngModel)]="junkflag">
+        <label class="mx-1" for="junkYes">Yes</label>
+        <input type="radio" id="junkNo" name="junkTran" value="No" [(ngModel)]="junkflag">
+        <label class="mx-1" for="junkNo">No</label><br>
+        <div class="card-text">
+            <button class="btn btn-primary mx-1" (click)="addTranType()">Add Tran</button>
+            <button class="btn btn-primary">Cancel</button>
+        </div>
+        <br>
+    </div>
+</div>
